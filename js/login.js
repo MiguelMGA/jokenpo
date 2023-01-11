@@ -14,7 +14,7 @@ function validaInput(event) {
 };
 
 //Função para salvar o nome do jogador e redirecionar para a página do game
-formulario.addEventListener('submit', enviaFormulario);;
+formulario.addEventListener('submit', enviaFormulario);
 
 function enviaFormulario(event) {
     event.preventDefault();
