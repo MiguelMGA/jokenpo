@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Jokenpo - Game </title>
+        <link rel="shortcut icon" href="./images/soco.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/game.css">
+        <script defer src="./js/game.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <p> Jokenpo </p>
+            </div>
+        </header>
+        <main>
+            <section class="alinhamento-painel">
+                <div>
+                    <div class="texto">
+                        <p> Escolha de <spam id="player">Jogador</spam>: </p>
+                    </div>
+                    <div class="resposta" id="resposta-jogador">
+                        <img src="./images/padrao.png" alt="Resposta da Maquina" class="ppd">
+                    </div>
+                </div>
+                <p class="alinhamento-x"> X </p>
+                <div>
+                    <div class="texto">
+                        <p> Escolha da máquina: </p>
+                    </div>
+                    <div class="resposta" id="resposta-maquina">
+                        <img src="./images/padrao.png" alt="Resposta da Maquina" class="ppd">
+                    </div>
+                </div>
+            </section>
+            <section class="resultado" id="resultado">
+                <p> Escolha uma das opções abaixo: </p>
+            </section>
+            <section class="opcoes">
+                <button class="botao" onclick="partida(1)"> <img src="./images/pedra.png" alt="Pedra" class="ppd"> </button>
+                <button class="botao" onclick="partida(2)"> <img src="./images/papel.png" alt="Papel" class="ppd"> </button>
+                <button class="botao" onclick="partida(3)"> <img src="./images/tesoura.png" alt="Tesoura" class="ppd"> </button>
+            </section>
+            <section class="centralizar-placar">
+                <div class="placar">
+                    <div class="placar-texto">
+                        <p> Placar </p>
+                    </div>
+                    <div class="placar-pontuacao">
+                        <div>
+                            <p id="player-placar"> Player </p>
+                            <p> Máquina </p>
+                            <p> Empate </p>
+                        </div>
+                        <div>
+                            <p id="placar-jogador"> 0 </p>
+                            <p id="placar-maquina" > 0 </p>
+                            <p id="placar-empate"> 0 </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
