@@ -1,5 +1,3 @@
-const opcoes = ["pedra", "papel", "tesoura"];
-
 //Busca o nome do jogador e mostra no placar
 let nomeJogador = localStorage.getItem('jogador');
 let player = document.querySelector('#player');
@@ -22,16 +20,7 @@ let placarEmpate = 0;
 let txtPlacarEmpate = document.querySelector("#placar-empate");
 
 function partida(valor) {
-    let jogador;
-
-    //Escolha do jogador
-    if(valor == 1) {
-        jogador = opcoes[0];
-    }else if(valor == 2) {
-        jogador = opcoes[1];
-    }else if(valor == 3) {
-        jogador = opcoes[2];
-    };
+    let jogador = valor;
 
     //Imagem da escolha do jogador
     if(jogador == "pedra") {
@@ -43,8 +32,8 @@ function partida(valor) {
     };
     
     //Escolha da máquina
+    const opcoes = ["pedra", "papel", "tesoura"];
     let numRandom = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
-    
     let maquina = opcoes[numRandom];
 
     //Imagem da escolha da máquina
